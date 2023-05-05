@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+        <variable name="baseViewModel" type="ma.boumlyk.onboarding.ui.BaseViewModel"/>
+        <import type="android.view.View"/>
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLyBottom"
+        android:padding="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            style="@style/btn_back"
+            android:onClick="@{(v)-> baseViewModel.onBackPressed()}"
+            tools:ignore="ContentDescription" />
+
+
+        <RelativeLayout
+            android:id="@+id/lyNext"
+            style="@style/rl_btn"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:onClick="@{(v) -> baseViewModel.onNextPressed()}"
+            tools:ignore="RelativeOverlap">
+
+            <TextView
+                android:id="@+id/btnCnx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="@dimen/_30sdp"
+                android:paddingEnd="@dimen/_30sdp"
+                android:text="@string/continue_"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+            <ProgressBar
+                android:id="@+id/btn_progress"
+                style="@style/btn_progress"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

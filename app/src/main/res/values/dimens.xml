@@ -1,0 +1,35 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="underline_stroke_width">@dimen/_2sdp</dimen>
+    <dimen name="underline_width">@dimen/_20sdp</dimen>
+    <dimen name="section_reduction">@dimen/_5sdp</dimen>
+    <dimen name="text_size">@dimen/_13sdp</dimen>
+    <dimen name="hint_size">@dimen/_13sdp</dimen>
+    <dimen name="hint_small_size">@dimen/_10sdp</dimen>
+    <dimen name="text_margin_bottom">@dimen/_8sdp</dimen>
+    <dimen name="hint_margin_bottom">@dimen/_8sdp</dimen>
+    <dimen name="view_height">@dimen/_35sdp</dimen>
+
+
+    <!-- ************************************************************************************  -->
+    <!-- ************************************************************************************  -->
+
+
+    <!-- ***********************************  -->
+
+
+    <!-- Text Heading -->
+
+
+    <!--dimes for design 3-->
+    <dimen name="headerTextSize">@dimen/_16sdp</dimen>
+    <dimen name="newsMoreTextSize">@dimen/_13sdp</dimen>
+
+
+    <!-- ***********************************  -->
+
+
+
+    <!-- Margins / Padding / Sizes-->
+</resources>

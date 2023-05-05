@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="ma.boumlyk.onboarding.ui.BaseViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_close"
+            android:onClick="@{(v) -> viewModel.onDismissEditDialog()}"
+            app:tint="@color/gray_color_dark" />
+
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:text="@{viewModel.tempDialogLabel}"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_13sdp" />
+
+        <EditText
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/input_border"
+            android:imeOptions="actionSearch"
+            android:textAllCaps="true"
+            android:inputType="textCapCharacters"
+            android:maxLines="1"
+            android:textSize="@dimen/_13sdp"
+            android:text="@={viewModel.tempDialogValue}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/btn_add_tocard_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_11sdp"
+            android:textSize="@dimen/_13sdp"
+            android:background="@drawable/btn_background"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:gravity="center"
+            android:onClick="@{(v) -> viewModel.onConfirmEdit(v)}"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</layout>
+
+
+
+

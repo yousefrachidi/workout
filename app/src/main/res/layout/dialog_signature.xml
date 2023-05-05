@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="ma.boumlyk.onboarding.ui.tools.uiHTMLViewer.ActivityHTMLViewerForSignatureViewModel" />
+        <import type="android.view.View" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        app:circularflow_defaultRadius="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/county_nif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/please_sign_in_the_following_box"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="@dimen/_13sdp" />
+
+        <LinearLayout
+            android:id="@+id/layout_sign"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:background="@drawable/input_border"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp">
+
+                <TextView
+                    style="@style/txt_info"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="left"
+                    android:text="@string/signature"
+                    android:textSize="@dimen/_13sdp"/>
+
+                <ImageView
+                    android:id="@+id/img_clear"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_cleaning"
+                    app:tint="@color/colorPrimary" />
+
+            </RelativeLayout>
+
+            <!--<com.github.gcacace.signaturepad.views.SignaturePad
+                android:id="@+id/signaturePad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laytbtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_13sdp">
+
+            <TextView
+                android:id="@+id/signature_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/input_border"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/primary"
+                android:padding="@dimen/_7sdp"/>
+
+            <TextView
+                android:id="@+id/signature_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp"
+                android:background="@drawable/btn_background"
+                android:textColor="@color/white"
+                android:padding="@dimen/_7sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

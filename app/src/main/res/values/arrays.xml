@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_civil">
+        <item>Monsieur</item>
+        <item>Madame</item>
+    </string-array>
+    <string-array name="array_marital_status">
+        <item>Marié(e)</item>
+        <item>Célibataire</item>
+        <item>Divorcé(e)</item>
+        <item>Veuf(ve)</item>
+    </string-array>
+    <array name="typeDoc">
+        <item>Carte d\'identité</item>
+        <item>Passeport</item>
+        <item>Carte de séjour</item>
+    </array>
+</resources>

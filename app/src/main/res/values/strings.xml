@@ -1,0 +1,197 @@
+<resources>
+    <string name="app_name">App Test</string>
+    <string name="action_settings">Paramètres</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Premier fragment</string>
+    <string name="second_fragment_label">Deuxième fragment</string>
+    <string name="next">Suivant</string>
+    <string name="previous">Précédent</string>
+
+    <string name="hello_first_fragment">Bonjour premier fragment</string>
+    <string name="hello_second_fragment">Bonjour, deuxième fragment. Arg: %1$s</string>
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+
+    <string name="retrofit_error_handler_not_allowed_cnx">Pour des raisons de sécurité, l\'application ne peut pas être opérationnelle sur cet appareil.</string>
+    <string name="retrofit_error_handler_cnx">Une erreur de connexion au serveur s’est produite, merci de vérifier votre connexion et réessayer</string>
+    <string name="retrofit_error_handler_divers">Une erreur est survenue lors de la connexion au système… Veuillez réessayer ultérieurement.</string>
+    <string name="error_handler_divers">Une erreur s\'est produite lors du traitement de l\'opération en cours … Veuillez vérifier votre connexion et réessayer.</string>
+
+    <string name="permission_required">Veuillez accorder les permissions suivantes pour continuer</string>
+    <string name="read_approved_on">J\'ai lu et j\'accepte <b><font color="#FF9800">les conditions générales *</font></b> </string>
+    <string name="error_occurred_while_loading_the_document">Une erreur s\'est produite lors du chargement du document. Veuillez vérifier votre signature et réessayer.</string>
+    <string name="error_occurred_while_submitting_your_signature">Une erreur s\'est produite lors de la soumission de votre signature. Veuillez vérifier votre signature et réessayer.</string>
+    <string name="please_sign_">Veuillez signer s\'il vous plait</string>
+    <string name="sign_box_empty">Aucune signature n\'a été détectée, veuillez signer dans la case correspondante</string>
+    <string name="signature">Signature</string>
+
+
+    <string name="empty_username">Veuillez saisir votre identifiant</string>
+    <string name="empty_email">Veuillez saisir votre adresse mail</string>
+    <string name="error_email_phone_not_valid">L\'adresse mail que vous avez saisi est invalide</string>
+    <string name="empty_password">Veuillez saisir votre mot de passe</string>
+    <string name="please_type_phone_number">Veuillez saisir le numéro de téléphone</string>
+    <string name="please_type_call_number">Veuillez saisir le numéro de ligne</string>
+
+    <string name="error_phone_not_valid">Veuillez saisir un numéro de téléphone valide</string>
+    <string name="select_operator_phone_please">Veuillez sélectionner votre opérateur de téléphone mobile</string>
+
+    <string name="please_your_catalog">Veuillez sélectionner une offre</string>
+    <string name="an_error_occurred_while_sharing_the_document">Une erreur s\'est produite lors du partage du document</string>
+    <string name="espace_personnel">ESPACE PERSONNEL</string>
+    <string name="connection_to_the_personal_space">Connexion à l\'espace personnel</string>
+    <string name="my_id">Mon identifiant :</string>
+    <string name="password">Mot de passe :</string>
+    <string name="remember_me">Se souvenir de moi</string>
+    <string name="login">Connexion</string>
+    <string name="access_anonymously">Accéder en mode hors connexion</string>
+    <string name="please_enter_your_number_docment">Veuillez saisir le numéro de la pièce d\'identité</string>
+    <string name="details"><u>Détails</u></string>
+    <string name="no_notifications_found">Vous n\'avez aucune nouvelle notification</string>
+
+    <string name="invalid_username_password">L\'identifiant ou le mot de passe saisi ne correspond à aucun compte </string>
+    <string name="user_name_not_correspond_to_any_account"> L\'identifiant que vous avez saisi ne correspond à aucun compte </string>
+    <string name="select_their_marital_status">Veuillez sélectionner la situation familiale</string>
+    <string name="select_their_civility">Veuillez sélectionner la civilité</string>
+
+    <string name="agency_opening_closing_hours">Horaire d’ouverture</string>
+    <string name="agency_address">Adresse</string>
+    <string name="marker_open_times">08:15 – 15:45</string>
+    <string name="select_type_client">Veuillez sélectionner le type de client</string>
+    <string name="select_sous_type_client">Veuillez sélectionner le sous type de client</string>
+    <string name="empty_social_reason">Veuillez saisir la raison Sociale</string>
+    <string name="file_not_found">Fichier introuvable, veuillez réessayer</string>
+    <string name="first_name">Prénom :</string>
+    <string name="last_name">Nom :</string>
+    <string name="birth_date">Date de naissance :</string>
+    <string name="cin_number">N° de CIN :</string>
+    <string name="validity_date">Date de validité :</string>
+    <string name="address">Adresse de résidence :</string>
+    <string name="confirm">Confirmer</string>
+    <string name="remettre_en_service">Remettre en service</string>
+    <string name="cancel">Annuler</string>
+    <string name="gps_network_not_enabled">Veuillez activer le GPS afin que nous puissions vous proposer les agences les plus proches de votre position actuelle.  </string>
+    <string name="open_location_settings">Accédez aux paramètres pour activer votre service de localisation</string>
+    <string name="code_correct_guid">code correct : 0000</string>
+    <string name="adresse_compl_mentaire">Adresse complémentaire</string>
+    <string name="professionel">Professionel</string>
+    <string name="bonjour_">Bonjour  %s,</string>
+    <string name="password_strength_weak">Faible</string>
+    <string name="password_strength_medium">Moyen</string>
+    <string name="password_strength_strong">Fort</string>
+    <string name="password_strength_very_strong">Très fort</string>
+    <string name="error_password_not_valid_very_high">Votre mot de passe doit comporter au moins 8 caractères et être composé d\'au moins un caractère minuscule, un caractère majuscule et un chiffre.</string>
+    <string name="error_password_not_confirmed">Les mots de passe saisis ne sont pas identiques.</string>
+    <string name="return_the_code">Renvoyer le code</string>
+    <string name="enter_your_login">Veuillez saisir votre login</string>
+    <string name="code_incorrect">le code saisi est incorrect</string>
+    <string name="search">Rechercher</string>
+    <string name="scanner">Scanner</string>
+    <string name="select">Sélectionner</string>
+    <string name="line_number">N° de la ligne</string>
+    <string name="id">Pièce d\’identité</string>
+    <string name="aucun_donnee">Aucune donnée n\’est disponible</string>
+    <string name="reference">Référence</string>
+    <string name="date">Date</string>
+    <string name="date__">Date de création</string>
+    <string name="amount">Montant</string>
+    <string name="status">Statut</string>
+    <string name="folder">Dossier</string>
+    <string name="number_of_file">N° du dossier :</string>
+    <string name="creation_date">Date de création :</string>
+    <string name="last_modification">Dernière modification :</string>
+    <string name="sex">Sexe :</string>
+    <string name="client">Client</string>
+    <string name="comments">Commentaires</string>
+    <string name="todo">TODO</string>
+    <string name="my_profile">MON PROFIL</string>
+    <string name="phone_number">N° de téléphone :</string>
+    <string name="mail_address">Adresse mail :</string>
+    <string name="my_notifications">MES NOTIFICATIONS</string>
+    <string name="customer_status">STATUT CLIENT</string>
+    <string name="details_">Détails</string>
+    <string name="customer_profile">PROFIL CLIENT</string>
+    <string name="category">Catégorie :</string>
+    <string name="sub_category">Sous Catégorie :</string>
+
+    <string name="manual_entry">Saisie manuelle</string>
+    <string name="auto_scan">Scan automatique</string>
+    <string name="existing_customer">CLIENT EXISTANT</string>
+    <string name="full_name">Nom Complet</string>
+    <string name="call_number">N° de la ligne</string>
+    <string name="type_of_id">Type de la pièce d\’identité</string>
+    <string name="date_of_invoice">Date de la facture :</string>
+    <string name="due_date">Date d\'échéance :</string>
+    <string name="customer_information">Informations client</string>
+    <string name="billing_address">Adresse de facturation :</string>
+    <string name="please_complete_the_fields_below">Veuillez remplir les champs ci dessous</string>
+    <string name="summary_of_information">RÉCAPITULATIF DES INFORMATIONS</string>
+    <string name="identity_information">Informations d’identité</string>
+    <string name="residence_information">Informations de résidence</string>
+    <string name="civility">Civilité :</string>
+    <string name="marital_status">Etat civil :</string>
+    <string name="continue_">Continuer</string>
+    <string name="please_enter_your_client_s_company_name">Veuillez saisir la Raison sociale de votre client</string>
+    <string name="professional_information">INFORMATIONS PROFESSIONNELLES</string>
+    <string name="add_document">Ajouter un document</string>
+    <string name="further_information">Informations complémentaires</string>
+    <string name="my_identifiers">MES IDENTIFIANTS</string>
+    <string name="login_">Login :</string>
+    <string name="address_menara">Email :</string>
+    <string name="password_confirmation">Confirmation du mot de passe :</string>
+    <string name="congratulations">Félicitation !</string>
+    <string name="the_client_has_been_successfully_added_to_your_portfolio">Le client à été bien rajouté à votre portefeuille</string>
+    <string name="contract_signature">SIGNATURE DU CONTRAT</string>
+    <string name="to_share">Partager</string>
+    <string name="contact_data">DONNÉES DE CONTACT</string>
+    <string name="to_get_started_enter_your_customer_s_phone_number_and_email_address">Pour commencer, saisissez le numéro de téléphone et l\’adresse mail de votre client</string>
+    <string name="contact_number">N° de contact :</string>
+    <string name="verification_of_contact_data">VÉRIFICATION DES DONNÉES DE CONTACT</string>
+    <string name="please_enter_the_received_otp_code">Veuillez saisir le code OTP reçu</string>
+    <string name="your_customer_s_data_has_been_successfully_verified">Les données de votre client ont été bien vérifiées</string>
+    <string name="picking_out">Choisir</string>
+    <string name="choose_this_offer">Choisir cette offre</string>
+    <string name="please_select_the_commitment_period_chosen_by_your_client">Veuillez sélectionner la durée d’engagement choisie par votre client</string>
+    <string name="commitment_period">Durée d’engagement :</string>
+    <string name="welcome_to_your_dashboard">Bienvenue sur votre tableau de bord</string>
+    <string name="customer_research">RECHERCHE CLIENT</string>
+    <string name="please_sign_in_the_following_box">Veuillez signer dans la case suivante</string>
+    <string name="commune">Commune</string>
+    <string name="piece">Quartier</string>
+    <string name="way">Voie</string>
+    <string name="to_validate">Valider</string>
+    <string name="my_espace">MON ESPACE</string>
+    <string name="my_services">MES SERVICES</string>
+    <string name="contact_info"><![CDATA[CONTACTS & INFOS]]></string>
+    <string name="prospects">Prospects</string>
+    <string name="migration">Migration</string>
+    <string name="please_choose_the_type_of_operation_your_client_wishes_to_initiate">Veuillez choisir le type d’opération que votre client souhaite initier</string>
+    <string name="with"> Avec </string>
+    <string name="without"> Sans </string>
+    <string name="legal_identification_number_does_not_match">Numéro d\'identification légal ne correspond pas</string>
+    <string name="___________">__ __ __ __ __</string>
+    <string name="login_is_used">Ce login existe déjà, veuillez saisir un nouveau login</string>
+
+    <string name="email_is_used">Ce email existe déjà, veuillez saisir un nouveau email</string>
+    <string name="modifier">Modifier</string>
+    <string name="prendre">Prendre</string>
+    <string name="reprendre">Reprendre</string>
+    <string name="verification_des_donnees">VÉRIFICATION DES DONNÉES</string>
+    <string name="nom_de_client">Nom du client</string>
+    <string name="nom_de_client__">N° de client</string>
+    <string name="n_d_identit">N° d\'identité</string>
+    <string name="dr">DR</string>
+    <string name="login___">Login</string>
+    <string name="gps">Voulez-vous activer votre localisation ?</string>
+    <string name="derni_re_modification">Dernière modification</string>
+    <string name="commentaire">Commentaire</string>
+    <string name="derni_re_tape">Dernière étape</string>
+    <string name="error_save_document">Une erreur est survenue lors du chargement du document veuillez réessayer</string>
+    <string name="user_name_deja_used">User Name deja used</string>
+
+    <!--))//////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////// string dependency////////////////////////-->
+    <string name="search_or_select_item">Search/Select Item</string>
+    <string name="select_item">Select Item</string>
+    <string name="enter_your_login_">Le login saisi est invalide</string>
+    <string name="user_name_deja_connecte">Ce compte est déjà connecté</string>
+</resources>

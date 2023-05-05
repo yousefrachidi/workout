@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!--
+    openssl s_client -showcerts -connect api.skyidentification.com:443 </dev/null 2>/dev/null|openssl x509 -outform PEM >mycertfile.pem
+    openssl x509 -in api.skyidentification.com.crt -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+    -->
+
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!--<certificates src="@raw/digi_vente_root_ca" />
+            <certificates src="@raw/digi_vente_backend" />
+            <certificates src="@raw/digivente_iam_ma" />-->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- IAM VMs Staging Config-->
+    <domain-config>
+        <trustkit-config enforcePinning="true" />
+        <domain cleartextTrafficPermitted="false" includeSubdomains="false">10.100.227.45</domain>
+        <pin-set expiration="2023-03-14">
+            <pin digest="SHA-256">zkTcnxjbcDvT6rkOH7iraNKCvq7QfzCjlN2QnZfosSk=</pin>
+            <pin digest="SHA-256">NteSUtWIBRspfl1cewzPKvIW/IhUCZrPbuyEW+HNBgo=</pin>
+        </pin-set>
+    </domain-config>
+
+    <!-- IAM VMs Prod Config
+    <domain-config>
+        <trustkit-config  disableDefaultReportUri="true"  enforcePinning="true" />
+        <domain cleartextTrafficPermitted="false" includeSubdomains="true">*.boumlyk.ma</domain>
+        <pin-set expiration="2023-06-30">
+            <pin digest="SHA-256">UgdljgnPNXQa8P4htZmtgRUdqsyNPSHu9Fx7c58hvX8=</pin>
+            <pin digest="SHA-256">RkhWTcfJAQN/YxOR12VkPo+PhmIoSfWd/JVkg44einY=</pin>
+            <pin digest="SHA-256">x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=</pin>
+        </pin-set>
+    </domain-config>-->
+
+    <!-- IDC Cloud Config -->
+
+    <domain-config>
+        <trustkit-config disableDefaultReportUri="true" enforcePinning="true" />
+        <domain cleartextTrafficPermitted="false" includeSubdomains="true">demo.domain.com</domain>
+        <pin-set expiration="2024-01-09">
+            <pin digest="SHA-256">4RZT/IDMoW5SN5OW3ahtSO/a5yyRmllCBl7f4xikoyU=</pin>
+            <pin digest="SHA-256">R3hcMOAGw0WFztuG2skTodoHp8IGid3Qg63Cn7YUYoM=</pin>
+            <pin digest="SHA-256">x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=</pin>
+        </pin-set>
+    </domain-config>
+
+
+</network-security-config>
+

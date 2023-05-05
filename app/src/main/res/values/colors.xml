@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#f96511</color> <!-- The color of the app bar.-->
+    <color name="colorPrimaryLite">#FD782B</color> <!-- The color of the app bar.-->
+    <color name="colorPrimaryDark">#E85502</color>  <!-- #FFC107 ::: The color of the status bar and contextual app bars; this is normally a dark version of colorPrimary.-->
+    <color name="colorPrimaryTooDark">#00E676</color> <!-- #FFAB0B ::: The color of the status bar and contextual app bars; this is normally a dark version of colorPrimary.-->
+
+    <color name="colorAccent">#1F5B9B</color>
+    <color name="colorSecondaryAccent">#448AFF</color>
+    <color name="colorAccentDark">#0F2F50</color>
+
+
+    <color name="colorInputBorder">#EFEEFE</color>
+    <color name="colorInputSolid">#EFEEFE</color>
+
+
+    <color name="agency_map_text_color">#526461</color>
+    <color name="gray_color_lite">#F0E2E2E2</color>
+    <color name="gray_color">#F0B4B4B4</color>
+    <color name="gray_color_too_lite">#F5FDFDFD</color>
+
+
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+
+
+    <color name="purple_200">#FD965B</color>
+    <color name="purple_500">#E85502</color>
+    <color name="purple_700">#f96511</color>
+    <color name="teal_200">#1F5B9B</color>
+    <color name="teal_700">#448AFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#1F5B9B</color>
+
+    <color name="gray_color_dark">#F0909090</color>
+    <color name="blackColor">#000000</color>
+    <color name="disabledColor">#CCCCCC</color>
+
+    <color name="field_text2">#403C3C</color>
+
+    <color name="errorColor">#D50000</color>
+    <color name="successColor">#388E3C</color>
+    <color name="warningColor">#FFA900</color>
+    <color name="colorLyBottom">#E1FFFFFF</color>
+
+   <!--   secret -->
+    <color name="errorTextViewColor">#ff414d</color>
+    <color name="orange">#FF9800</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="colorHeaderMenu">#EFEEFE</color>
+    <!--
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////// color dependency //////////////////////////////////////////////////////////-->
+
+</resources>
