@@ -1,4 +1,4 @@
-package ma.boumlyk.onboarding.ui.onboarding.login;
+package ma.boumlyk.onboarding.ui.onboarding.registerInfo;
 
 import javax.inject.Inject;
 
@@ -10,11 +10,13 @@ import ma.boumlyk.onboarding.ui.onboarding.home.FirstF;
 import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 
 @HiltViewModel
-public class FLoginViewModel extends BaseViewModel {
+public class RegisterInfoViewModel extends BaseViewModel {
+
+    String[] addresses = {"123 Main St, Anytown USA", "456 Oak St, Anycity USA", "789 Pine St, Anyvillage USA"};
 
 
     @Inject
-    public FLoginViewModel() {
+    public RegisterInfoViewModel() {
     }
 
     public void initiateViewModel(BaseActivity activity) {
