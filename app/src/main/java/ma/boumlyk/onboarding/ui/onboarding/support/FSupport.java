@@ -1,7 +1,5 @@
-package ma.boumlyk.onboarding.ui.onboarding.login;
+package ma.boumlyk.onboarding.ui.onboarding.support;
 
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,20 +11,20 @@ import androidx.lifecycle.ViewModelProvider;
 
 import ma.boumlyk.onboarding.R;
 import ma.boumlyk.onboarding.databinding.FLoginBinding;
-import ma.boumlyk.onboarding.databinding.FragmentFirstBinding;
+import ma.boumlyk.onboarding.databinding.FSupportBinding;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseFragment;
 
-public class FLogin extends BaseFragment {
+public class FSupport extends BaseFragment {
 
 
-    FLoginBinding binding;
+    FSupportBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.f_login, container, false);
-        viewModel = new ViewModelProvider(this).get(FLoginViewModel.class);
-        binding.setViewModel((FLoginViewModel) viewModel);
+        binding = DataBindingUtil.inflate(inflater, R.layout.f_support, container, false);
+        viewModel = new ViewModelProvider(this).get(FSupportViewModel.class);
+        binding.setViewModel((FSupportViewModel) viewModel);
         binding.setLifecycleOwner(this);
         initiateView();
         initiateObservers();

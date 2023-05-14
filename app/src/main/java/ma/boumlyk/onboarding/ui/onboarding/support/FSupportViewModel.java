@@ -1,4 +1,4 @@
-package ma.boumlyk.onboarding.ui.onboarding.login;
+package ma.boumlyk.onboarding.ui.onboarding.support;
 
 import javax.inject.Inject;
 
@@ -7,16 +7,16 @@ import ma.boumlyk.onboarding.data.sources.local.FileManager;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
 import ma.boumlyk.onboarding.ui.onboarding.home.FirstF;
-import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
+import ma.boumlyk.onboarding.ui.onboarding.login.FLogin;
 
 @HiltViewModel
-public class FLoginViewModel extends BaseViewModel {
+public class FSupportViewModel extends BaseViewModel {
 
     @Inject
     FileManager fileManager;
 
     @Inject
-    public FLoginViewModel() {
+    public FSupportViewModel() {
     }
 
     public void initiateViewModel(BaseActivity activity) {
@@ -29,14 +29,14 @@ public class FLoginViewModel extends BaseViewModel {
 
     }
 
-    public void onNeedSupport() {
-        fragment.postValue(new FSupport());
+    public void onSingUp() {
+
     }
 
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        fragment.postValue(new FirstF());
+        fragment.postValue(new FLogin());
     }
 }
