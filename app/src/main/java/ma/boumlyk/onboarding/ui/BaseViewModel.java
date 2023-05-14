@@ -73,7 +73,7 @@ public class BaseViewModel extends ViewModel implements Observable {
 
         try {
             updateManager = new UpdateManager(activity);
-            updateManager.updateMe();
+//            updateManager.updateMe();
         } catch (Exception e) {
             Log.d("TAG", "onCreate: " + e.getMessage());
         }

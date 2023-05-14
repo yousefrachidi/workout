@@ -1,4 +1,4 @@
-package ma.boumlyk.onboarding.ui.onboarding;
+package ma.boumlyk.onboarding.ui.onboarding.login;
 
 import javax.inject.Inject;
 
@@ -9,23 +9,33 @@ import ma.boumlyk.onboarding.ui.BaseViewModel;
 import ma.boumlyk.onboarding.ui.onboarding.home.FirstF;
 
 @HiltViewModel
-public class OnboardingActivityViewModel extends BaseViewModel {
+public class FLoginViewModel extends BaseViewModel {
 
     @Inject
     FileManager fileManager;
 
     @Inject
-    public OnboardingActivityViewModel() {
+    public FLoginViewModel() {
     }
 
     public void initiateViewModel(BaseActivity activity) {
         super.initiateViewModel(activity);
 
-        boolean isException = activity.getIntent().getBooleanExtra("UNCAUGHT_EXCEPTION", false);
-
-
-//        intentClass.postValue(new Pair<>(new Intent(), OnboardingActivity.class));
-        fragment.postValue(new FirstF());
     }
 
+    public void onCreateAccount() {
+
+
+    }
+
+    public void onSingUp() {
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        fragment.postValue(new FirstF());
+    }
 }

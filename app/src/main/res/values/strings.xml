@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App Test</string>
+    <string name="app_name">MySalaf</string>
     <string name="action_settings">Paramètres</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Premier fragment</string>
@@ -194,4 +194,12 @@
     <string name="select_item">Select Item</string>
     <string name="enter_your_login_">Le login saisi est invalide</string>
     <string name="user_name_deja_connecte">Ce compte est déjà connecté</string>
+
+
+
+
+    <!--    string for this app-->
+
+    <string name="need_support"><u>Need Support?</u></string>
+
 </resources>

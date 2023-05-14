@@ -6,12 +6,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackg">
 
-        <include
-            layout="@layout/layout_background"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            android:padding="0dp"
+            android:layout_margin="0dp" />
 
 
     </RelativeLayout>

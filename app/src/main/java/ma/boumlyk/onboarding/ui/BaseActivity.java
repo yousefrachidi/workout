@@ -14,7 +14,6 @@ import dagger.hilt.android.AndroidEntryPoint;
 import ma.boumlyk.onboarding.Configs;
 import ma.boumlyk.onboarding.R;
 import ma.boumlyk.onboarding.models.cookie.Cookies;
-import ma.boumlyk.onboarding.tools.updateManager.UpdateManager;
 import ma.boumlyk.onboarding.ui.onboarding.OnboardingActivity;
 import timber.log.Timber;
 
