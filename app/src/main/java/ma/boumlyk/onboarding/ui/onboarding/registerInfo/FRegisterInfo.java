@@ -10,10 +10,11 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import ma.boumlyk.onboarding.R;
+import ma.boumlyk.onboarding.databinding.FRegisterInfoBinding;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseFragment;
 
-public class RegisterInfo extends BaseFragment {
+public class FRegisterInfo extends BaseFragment {
 
 
     FRegisterInfoBinding binding;
@@ -21,8 +22,8 @@ public class RegisterInfo extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.f_register_info, container, false);
-        viewModel = new ViewModelProvider(this).get(RegisterInfoViewModel.class);
-        binding.setViewModel((RegisterInfoViewModel) viewModel);
+        viewModel = new ViewModelProvider(this).get(FRegisterInfoViewModel.class);
+        binding.setViewModel((FRegisterInfoViewModel) viewModel);
         binding.setLifecycleOwner(this);
         initiateView();
         initiateObservers();

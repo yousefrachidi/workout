@@ -323,6 +323,16 @@
 
 <!--    new style -->
 
+    <style name="MyNumberKeyboardStyle">
+        <item name="android:background">@color/gray_color</item>
+<!--        <item name="button_text_size">16sp</item>-->
+<!--        <item name="button_text_font">@font/my_button_text_font</item>-->
+<!--        <item name="button_padding">8dp</item>-->
+<!--        <item name="button_margin">4dp</item>-->
+<!--        <item name="button_cornerRadius">4dp</item>-->
+    </style>
+
+
 
 
 

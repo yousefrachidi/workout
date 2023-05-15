@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="ma.boumlyk.onboarding.ui.onboarding.registerInfo.FRegisterInfoViewModel" />
+            type="ma.boumlyk.onboarding.ui.onboarding.registerPhone.FRegisterPhoneViewModel" />
     </data>
 
 
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
-                android:id="@+id/minus"
+                android:id="@+id/btnBack"
                 android:layout_width="@dimen/_35sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_centerVertical="true"
@@ -85,28 +85,7 @@
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/black" />
 
-                <EditText
-                    android:id="@+id/editFullName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:backgroundTint="@color/gray_color"
-                    android:hint="Full Name"
-                    android:inputType="textPersonName|textAutoCorrect|textCapWords"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:textColorHint="@color/gray_color" />
 
-
-                <EditText
-                    android:id="@+id/editEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:backgroundTint="@color/gray_color"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:textColorHint="@color/gray_color" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -143,28 +122,16 @@
 
                 </LinearLayout>
 
-                <AutoCompleteTextView
-                    android:id="@+id/address_edit_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:backgroundTint="@color/gray_color"
-                    android:hint="City"
-                    android:inputType="textPostalAddress"
-                    android:textColorHint="@color/gray_color"
-                    android:textSize="16sp" />
 
-                <EditText
-                    android:id="@+id/editAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:backgroundTint="@color/gray_color"
-                    android:hint="Address"
-                    android:inputType="textPostalAddress"
-                    android:maxLines="3"
-                    android:textColorHint="@color/gray_color"
-                    android:textSize="16sp" />
+
+<!--                <com.davidmiguel.numberkeyboard.NumberKeyboard-->
+<!--                    xmlns:keyboard="http://schemas.android.com/apk/res-auto"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_200sdp"-->
+<!--                    keyboard:numberkeyboard_keyboardType="integer" />-->
+
+
+
             </LinearLayout>
 
 
@@ -174,7 +141,7 @@
                 android:layout_below="@id/rlFirst"
                 android:gravity="bottom"
                 android:layout_alignParentBottom="true"
-               >
+                >
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnNext"

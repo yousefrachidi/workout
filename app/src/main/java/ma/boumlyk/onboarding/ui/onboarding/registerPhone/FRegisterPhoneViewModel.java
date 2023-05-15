@@ -1,20 +1,22 @@
-package ma.boumlyk.onboarding.ui.onboarding.home;
+package ma.boumlyk.onboarding.ui.onboarding.registerPhone;
 
 import javax.inject.Inject;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
-import ma.boumlyk.onboarding.ui.onboarding.login.FLogin;
+import ma.boumlyk.onboarding.ui.onboarding.home.FirstF;
 import ma.boumlyk.onboarding.ui.onboarding.registerInfo.FRegisterInfo;
+import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 
 @HiltViewModel
-public class FirstFViewModel extends BaseViewModel {
+public class FRegisterPhoneViewModel extends BaseViewModel {
 
+    String[] addresses = {"123 Main St, Anytown USA", "456 Oak St, Anycity USA", "789 Pine St, Anyvillage USA"};
 
 
     @Inject
-    public FirstFViewModel() {
+    public FRegisterPhoneViewModel() {
     }
 
     public void initiateViewModel(BaseActivity activity) {
@@ -22,19 +24,19 @@ public class FirstFViewModel extends BaseViewModel {
 
     }
 
-
     public void onCreateAccount() {
-        fragment.postValue(new FRegisterInfo());
+
+
     }
 
-    public void onSingIn() {
-        fragment.postValue(new FLogin());
+    public void onNeedSupport() {
+        fragment.postValue(new FSupport());
     }
 
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
+        fragment.postValue(new FRegisterInfo());
     }
 }
