@@ -201,5 +201,7 @@
     <!--    string for this app-->
 
     <string name="need_support"><u>Need Support?</u></string>
+    <string name="create_account">Create account</string>
+    <string name="sing_in">Sing In</string>
 
 </resources>

@@ -37,7 +37,9 @@ public class FRegisterPhone extends BaseFragment {
 
             }
         });
-        slideDown(binding.relativeLayout2);
+//        slideDown(binding.relativeLayout2);
+        viewModel.animateViewFromBottomToTop(binding.relativeLayout2);
+
     }
 
     private void initiateView() {
