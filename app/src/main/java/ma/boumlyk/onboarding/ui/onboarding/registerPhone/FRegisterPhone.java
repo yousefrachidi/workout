@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
 
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -13,6 +14,7 @@ import ma.boumlyk.onboarding.R;
 import ma.boumlyk.onboarding.databinding.FRegisterPhoneBinding;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseFragment;
+import ma.boumlyk.onboarding.ui.tools.UITools;
 
 public class FRegisterPhone extends BaseFragment {
 
@@ -31,10 +33,24 @@ public class FRegisterPhone extends BaseFragment {
     }
 
     private void initiateObservers() {
-        viewModel.initiateViewModel((BaseActivity) requireActivity());
+        ((FRegisterPhoneViewModel) viewModel).initiateViewModel((BaseActivity) requireActivity(),binding.editPhoneNumber);
         viewModel.actions.observe(requireActivity(), actions -> {
             for (String action : actions) {
+                switch (action) {
+                    case BaseActivity.ACTION_PHONE_NOT_VALID:
+                        onPhoneNotValid();
+                        break;
+                    case BaseActivity.ACTION_ON_PHONE_TYPING:
+                        onPhoneTyping();
+                        break;
 
+                    case BaseActivity.ACTION_FINISH_LOADING:
+                        onFinishLoading();
+                        break;
+                    case BaseActivity.ACTION_START_LOADING:
+                        onStartLoading();
+                        break;
+                }
             }
         });
 //        slideDown(binding.relativeLayout2);
@@ -53,5 +69,22 @@ public class FRegisterPhone extends BaseFragment {
         animate.setFillAfter(true);
         view.startAnimation(animate);
       //  view.setVisibility(View.VISIBLE);
+    }
+
+    protected void onPhoneTyping() {
+        binding.editPhoneNumber.setTextColor(ContextCompat.getColor(requireContext(), R.color.field_text2));
+    }
+
+    protected void onPhoneNotValid() {
+        binding.editPhoneNumber.setTextColor(ContextCompat.getColor(requireActivity(), R.color.errorTextViewColor));
+    }
+
+
+    private void onStartLoading() {
+       // UITools.setOnLoadingState(true, requireActivity(), binding.footerLayout.btnCnx, R.id.btn_progress, R.id.btn_next);
+    }
+
+    private void onFinishLoading() {
+        //UITools.setOnLoadingState(false, requireActivity(), binding.footerLayout.btnCnx, R.id.btn_progress, R.id.btn_next);
     }
 }

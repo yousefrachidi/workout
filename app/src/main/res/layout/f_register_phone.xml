@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:gravity="center"
-                android:text="1/4"
+                android:text="2/4"
                 android:textAppearance="?android:textAppearanceLarge"
                 android:textColor="@color/black"
                 android:textSize="16dp" />
@@ -74,7 +74,8 @@
             <LinearLayout
                 android:id="@+id/rlFirst"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_bottom"
                 android:orientation="vertical">
 
                 <TextView
@@ -90,28 +91,52 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
                     android:orientation="vertical">
 
-                    <com.hbb20.CountryCodePicker
-                        android:id="@+id/ccp_cnx"
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:visibility="visible"
-                        app:ccp_autoDetectCountry="true"
-                        app:ccp_countryAutoDetectionPref="SIM_NETWORK_LOCALE"
-                        app:ccp_countryPreference="MA,US,FR,DZ"
-                        app:ccp_defaultLanguage="FRENCH"
-                        app:ccp_defaultNameCode="MA"
-                        app:ccp_rememberLastSelection="true"
-                        app:ccp_showArrow="true"
-                        app:ccp_showFlag="false"
-                        app:ccp_showFullName="true"
-                        app:ccp_showNameCode="false"
-                        app:ccp_showPhoneCode="false"
-                        app:ccp_textGravity="LEFT" />
+                        android:orientation="horizontal">
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/ccp_cnx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start|center"
+                            android:gravity="center"
+                            android:visibility="visible"
+                            app:ccp_autoDetectCountry="true"
+                            app:ccp_countryAutoDetectionPref="SIM_NETWORK_LOCALE"
+                            app:ccp_countryPreference="MA,US,FR,DZ"
+                            app:ccp_defaultLanguage="FRENCH"
+                            app:ccp_defaultNameCode="MA"
+                            app:ccp_rememberLastSelection="true"
+                            app:ccp_showArrow="true"
+                            app:ccp_showFlag="false"
+                            app:ccp_showNameCode="false"
+                            app:ccp_showPhoneCode="true"
+                            app:ccp_textGravity="LEFT" />
+                        <EditText
+                            android:id="@+id/edit_phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/flag_transparent"
+                            android:backgroundTintMode="src_in"
+                            android:drawablePadding="@dimen/_8sdp"
+                            android:hint="__ __ __ __ __"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:onTextChanged="@{viewModel::onPhoneTextChanged}"
+                            android:padding="@dimen/_12sdp"
+                            android:textSize="@dimen/_13sdp"
+                            app:onFocusChangeListener="@{viewModel.onPhoneFocusChanged}"
+                            tools:ignore="TextFields" />
+                    </LinearLayout>
+
+
 
                     <View
                         android:layout_width="match_parent"
@@ -126,15 +151,18 @@
                     xmlns:keyboard="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_200sdp"
-                    keyboard:numberkeyboard_keyboardType="integer" />
+                    android:layout_marginTop="@dimen/_40sdp"
+                    keyboard:numberkeyboard_keyboardType="integer"
+                    android:onClick="@{(v) -> viewModel.onNumberKeyboardClick(v)}"
+                    />
                 
             </LinearLayout>
 
 
             <RelativeLayout
+                android:id="@+id/rl_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rlFirst"
                 android:gravity="bottom"
                 android:layout_alignParentBottom="true"
                 >
@@ -147,7 +175,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/border_btn_secondly"
                     android:onClick="@{(v) -> viewModel.onCreateAccount()}"
-                    android:text="Next"
+                    android:text="Verfry"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

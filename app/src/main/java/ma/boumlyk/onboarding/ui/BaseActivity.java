@@ -44,6 +44,8 @@ public class BaseActivity extends AppCompatActivity {
     //PERMISSION
     public static final String ACTION_REQUEST_SKY_ID_PERMISSIONS = "REQUEST_SKY_ID_PERMISSIONS";
     public static final String ACTION_REQUEST_STORAGE_PERMISSIONS = "REQUEST_STORAGE_PERMISSIONS";
+    public static final String ACTION_ON_PHONE_TYPING = "ACTION_ON_PHONE_TYPING";
+    public static final String ACTION_PHONE_NOT_VALID = "ACTION_PHONE_NOT_VALID";
 
     protected BaseViewModel viewModel;
     private Handler disconnectHandler = new Handler(msg -> true);
