@@ -4,7 +4,7 @@
 
     <color name="colorPrimary">#f96511</color> <!-- The color of the app bar.-->
     <color name="colorPrimaryLite">#FD782B</color> <!-- The color of the app bar.-->
-    <color name="colorPrimaryDark">#E85502</color>  <!-- #FFC107 ::: The color of the status bar and contextual app bars; this is normally a dark version of colorPrimary.-->
+    <color name="colorPrimaryDark">#e3ebee</color>  <!-- #FFC107 ::: The color of the status bar and contextual app bars; this is normally a dark version of colorPrimary.-->
     <color name="colorPrimaryTooDark">#00E676</color> <!-- #FFAB0B ::: The color of the status bar and contextual app bars; this is normally a dark version of colorPrimary.-->
 
     <color name="colorAccent">#1F5B9B</color>

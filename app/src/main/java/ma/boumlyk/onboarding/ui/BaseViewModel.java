@@ -3,11 +3,13 @@ package ma.boumlyk.onboarding.ui;
 import static android.app.Activity.RESULT_OK;
 import static ma.boumlyk.onboarding.tools.updateManager.UpdateManager.MY_REQUEST_CODE;
 
+import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewTreeObserver;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -178,6 +180,33 @@ public class BaseViewModel extends ViewModel implements Observable {
                 updateManager.doOnresume();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void animateViewFromBottomToTop(final View view) {
+        if (view != null) {
+            view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                    final int TRANSLATION_Y = view.getHeight() / 3;
+                    view.setTranslationY(TRANSLATION_Y);
+                    view.setVisibility(View.GONE);
+                    view.setAlpha(0.0f);
+                    view.animate()
+                            .translationYBy(-TRANSLATION_Y)
+                            .setDuration(900)
+                            .alpha(1.0f)
+                            .setStartDelay(200)
+                            .setListener(new AnimatorListenerAdapter() {
+                                @Override
+                                public void onAnimationStart(final android.animation.Animator animation) {
+                                    view.setVisibility(View.VISIBLE);
+                                }
+                            })
+                            .start();
+                }
+            });
         }
     }
 

@@ -25,6 +25,10 @@
     <style name="Theme.IAMOnboarding.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">#e3ebee</item>
+        <item name="android:statusBarColor">#e3ebee</item>
+        <item name="android:windowLightStatusBar">true</item>
+
     </style>
 
     <style name="Theme.IAMOnboarding.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
