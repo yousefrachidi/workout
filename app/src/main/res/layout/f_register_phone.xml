@@ -124,11 +124,11 @@
 
 
 
-<!--                <com.davidmiguel.numberkeyboard.NumberKeyboard-->
-<!--                    xmlns:keyboard="http://schemas.android.com/apk/res-auto"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="@dimen/_200sdp"-->
-<!--                    keyboard:numberkeyboard_keyboardType="integer" />-->
+                <com.davidmiguel.numberkeyboard.NumberKeyboard
+                    xmlns:keyboard="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    keyboard:numberkeyboard_keyboardType="integer" />
 
 
 
