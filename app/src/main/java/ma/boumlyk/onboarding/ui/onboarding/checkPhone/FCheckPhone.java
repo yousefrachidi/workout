@@ -20,6 +20,7 @@ import ma.boumlyk.onboarding.databinding.FCheckPhoneBinding;
 import ma.boumlyk.onboarding.databinding.FRegisterPhoneBinding;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseFragment;
+import ma.boumlyk.onboarding.ui.onboarding.uploadDoc.FUploadDoc;
 
 public class FCheckPhone extends BaseFragment {
 
@@ -77,10 +78,10 @@ public class FCheckPhone extends BaseFragment {
 
 
                     if (otp.equals("0000")) {
-//                        requireActivity().getSupportFragmentManager().beginTransaction()
-//                                .replace(R.id.fragment, new , fragment.getTag())
-//                                .addToBackStack(null)
-//                                .commit();
+                        requireActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment, new FUploadDoc(), new FUploadDoc().getTag())
+                                .addToBackStack(null)
+                                .commit();
                     }else {
                         Toast.makeText(requireContext(), "Entered OTP: 0000" , Toast.LENGTH_SHORT).show();
                     }
