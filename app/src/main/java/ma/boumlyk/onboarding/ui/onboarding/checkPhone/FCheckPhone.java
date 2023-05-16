@@ -1,14 +1,19 @@
 package ma.boumlyk.onboarding.ui.onboarding.checkPhone;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.chaos.view.PinView;
 
 import ma.boumlyk.onboarding.R;
 import ma.boumlyk.onboarding.databinding.FCheckPhoneBinding;
@@ -33,18 +38,11 @@ public class FCheckPhone extends BaseFragment {
     }
 
     private void initiateObservers() {
-        ((FCheckPhoneViewModel) viewModel).initiateViewModel((BaseActivity) requireActivity(),binding.editPhoneNumber);
+        ((FCheckPhoneViewModel) viewModel).initiateViewModel((BaseActivity) requireActivity() );
         viewModel.actions.observe(requireActivity(), actions -> {
             for (String action : actions) {
                 switch (action) {
-                    case BaseActivity.ACTION_PHONE_NOT_VALID:
-                        onPhoneNotValid();
-                        break;
-                    case BaseActivity.ACTION_ON_PHONE_TYPING:
-                        onPhoneTyping();
-                        break;
-
-                    case BaseActivity.ACTION_FINISH_LOADING:
+                     case BaseActivity.ACTION_FINISH_LOADING:
                         onFinishLoading();
                         break;
                     case BaseActivity.ACTION_START_LOADING:
@@ -59,6 +57,36 @@ public class FCheckPhone extends BaseFragment {
     }
 
     private void initiateView() {
+        binding.pinView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // No action needed
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // No action needed
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String otp = s.toString();
+                if (otp.length() == binding.pinView.getItemCount()) {
+                    // Perform OTP verification logic here
+                    // You can access the entered OTP through the 'otp' variable
+
+
+                    if (otp.equals("0000")) {
+//                        requireActivity().getSupportFragmentManager().beginTransaction()
+//                                .replace(R.id.fragment, new , fragment.getTag())
+//                                .addToBackStack(null)
+//                                .commit();
+                    }else {
+                        Toast.makeText(requireContext(), "Entered OTP: 0000" , Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
 
     }
 
@@ -71,13 +99,7 @@ public class FCheckPhone extends BaseFragment {
       //  view.setVisibility(View.VISIBLE);
     }
 
-    protected void onPhoneTyping() {
-        binding.editPhoneNumber.setTextColor(ContextCompat.getColor(requireContext(), R.color.field_text2));
-    }
 
-    protected void onPhoneNotValid() {
-        binding.editPhoneNumber.setTextColor(ContextCompat.getColor(requireActivity(), R.color.errorTextViewColor));
-    }
 
 
     private void onStartLoading() {

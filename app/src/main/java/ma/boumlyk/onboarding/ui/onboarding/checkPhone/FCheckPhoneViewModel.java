@@ -24,16 +24,17 @@ public class FCheckPhoneViewModel extends BaseViewModel {
     boolean isPhoneNumberValid = false;
     boolean isPhoneNumberEmpty = true;
 
-    EditText editPhoneNumber;
+
 
 
     @Inject
     public FCheckPhoneViewModel() {
     }
 
-    public void initiateViewModel(BaseActivity requireActivity, EditText editPhoneNumber) {
+    public void initiateViewModel(BaseActivity requireActivity ) {
         super.initiateViewModel(requireActivity);
-        this.editPhoneNumber=editPhoneNumber;
+
+
     }
 
     public void onCreateAccount() {
