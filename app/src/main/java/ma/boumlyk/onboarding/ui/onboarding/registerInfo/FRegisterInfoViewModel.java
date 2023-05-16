@@ -1,5 +1,9 @@
 package ma.boumlyk.onboarding.ui.onboarding.registerInfo;
 
+import android.widget.ArrayAdapter;
+
+import androidx.fragment.app.FragmentActivity;
+
 import javax.inject.Inject;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
@@ -12,7 +16,7 @@ import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 @HiltViewModel
 public class FRegisterInfoViewModel extends BaseViewModel {
 
-    String[] addresses = {"123 Main St, Anytown USA", "456 Oak St, Anycity USA", "789 Pine St, Anyvillage USA"};
+    String[] cityList = {"Casa, casa City", "Rabat", "789 Pine St, Anyvillage USA"};
 
 
     @Inject
@@ -37,5 +41,10 @@ public class FRegisterInfoViewModel extends BaseViewModel {
     public void onBackPressed() {
         super.onBackPressed();
         fragment.postValue(new FirstF());
+    }
+
+    public ArrayAdapter<String> getAdapter(FragmentActivity requireActivity) {
+           ArrayAdapter<String> adapter = new ArrayAdapter<>(requireActivity, android.R.layout.simple_dropdown_item_1line, cityList);
+        return adapter;
     }
 }

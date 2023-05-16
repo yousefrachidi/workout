@@ -203,5 +203,6 @@
     <string name="need_support"><u>Need Support?</u></string>
     <string name="create_account">Create account</string>
     <string name="sing_in">Sing In</string>
+    <string name="resend_code"><u>Resend Code</u></string>
 
 </resources>

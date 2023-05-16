@@ -1,11 +1,11 @@
-package ma.boumlyk.onboarding.ui.onboarding.registerPhone;
+package ma.boumlyk.onboarding.ui.onboarding.checkPhone;
 
 import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import androidx.annotation.Nullable;
+import com.davidmiguel.numberkeyboard.NumberKeyboard;
 
 import java.util.Collections;
 
@@ -14,14 +14,12 @@ import javax.inject.Inject;
 import dagger.hilt.android.lifecycle.HiltViewModel;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
-import ma.boumlyk.onboarding.ui.onboarding.home.FirstF;
 import ma.boumlyk.onboarding.ui.onboarding.registerInfo.FRegisterInfo;
 import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 
 @HiltViewModel
-public class FRegisterPhoneViewModel extends BaseViewModel {
+public class FCheckPhoneViewModel extends BaseViewModel {
 
-    String[] addresses = {"123 Main St, Anytown USA", "456 Oak St, Anycity USA", "789 Pine St, Anyvillage USA"};
 
     boolean isPhoneNumberValid = false;
     boolean isPhoneNumberEmpty = true;
@@ -30,7 +28,7 @@ public class FRegisterPhoneViewModel extends BaseViewModel {
 
 
     @Inject
-    public FRegisterPhoneViewModel() {
+    public FCheckPhoneViewModel() {
     }
 
     public void initiateViewModel(BaseActivity requireActivity, EditText editPhoneNumber) {
@@ -43,12 +41,10 @@ public class FRegisterPhoneViewModel extends BaseViewModel {
 
     }
 
-    public void onNumberKeyboardClick(View v) {
-
-
-
+    public void onNumberKeyboardClick(View view) {
 
     }
+
 
     public void onPhoneTextChanged(CharSequence s, int start, int before, int count) {
         isPhoneNumberEmpty = s.toString().isEmpty();
