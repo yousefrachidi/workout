@@ -101,10 +101,11 @@
                         android:layout_gravity="center"
                         app:pinItemCount="6"
                         app:pinItemSpacing="8dp"
-                        app:pinItemBackground="@drawable/pin_item_bg"
+                        app:pinItemBackground="@color/gray_color"
                         app:pinItemTextSize="24sp"
                         app:pinItemTextColor="@color/gray_color"
                         app:pinItemElevation="2dp"
+                        app:speakableText="Enter your PIN"
                         app:lineColor="@color/gray_color"/>
 
                     <androidx.appcompat.widget.AppCompatButton
