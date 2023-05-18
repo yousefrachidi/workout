@@ -6,7 +6,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 import ma.boumlyk.onboarding.data.sources.local.FileManager;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
-import ma.boumlyk.onboarding.ui.onboarding.home.FirstF;
 import ma.boumlyk.onboarding.ui.onboarding.login.FLogin;
 
 @HiltViewModel
@@ -24,12 +23,12 @@ public class FSupportViewModel extends BaseViewModel {
 
     }
 
-    public void onCreateAccount() {
+    public void onCall() {
 
 
     }
 
-    public void onSingUp() {
+    public void onSendMail() {
 
     }
 
