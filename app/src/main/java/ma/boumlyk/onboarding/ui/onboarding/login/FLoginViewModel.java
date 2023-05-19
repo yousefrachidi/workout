@@ -1,11 +1,16 @@
 package ma.boumlyk.onboarding.ui.onboarding.login;
 
+import android.content.Intent;
+
+import androidx.core.util.Pair;
+
 import javax.inject.Inject;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
 import ma.boumlyk.onboarding.data.sources.local.FileManager;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
+import ma.boumlyk.onboarding.ui.onboarding.accueil.AccueilActivity;
 import ma.boumlyk.onboarding.ui.onboarding.home.FirstF;
 import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 
@@ -23,8 +28,7 @@ public class FLoginViewModel extends BaseViewModel {
     }
 
     public void onCreateAccount() {
-
-
+        intentClass.postValue(new Pair<>(new Intent(),AccueilActivity.class));
     }
 
     public void onNeedSupport() {

@@ -47,7 +47,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="@dimen/_110sdp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_alignParentEnd="true"
                 app:srcCompat="@drawable/logo_small" />
 
@@ -100,9 +100,6 @@
 
 
 
-
-
-
             </RelativeLayout>
 
 
@@ -139,9 +136,8 @@
                     android:text="@string/need_support"
                     android:textAllCaps="false"
                     android:textColor="@color/colorBtn" />
+
             </RelativeLayout>
-
-
 
         </RelativeLayout>
 

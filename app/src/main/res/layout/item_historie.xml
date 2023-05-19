@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp"
+    android:padding="@dimen/_3sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/monthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:text="May"
+        android:textSize="@dimen/_14sdp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/black"
+        android:textStyle="bold"  />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monthText"
+        android:text="Today - 13:21 "
+        android:textAllCaps="true"
+        android:textColor="@color/gray_color" />
+
+    <TextView
+        android:id="@+id/sommeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="800,00 DH"
+        android:textAllCaps="true"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

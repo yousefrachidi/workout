@@ -1,11 +1,4 @@
-package ma.boumlyk.onboarding.ui.onboarding.finish;
-
-import android.content.Context;
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-
-import java.util.Collections;
+package ma.boumlyk.onboarding.ui.onboarding.accueil.home;
 
 import javax.inject.Inject;
 
@@ -17,12 +10,12 @@ import ma.boumlyk.onboarding.ui.onboarding.registerInfo.FRegisterInfo;
 import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 
 @HiltViewModel
-public class FFinishViewModel extends BaseViewModel {
+public class FHomeViewModel extends BaseViewModel {
 
 
 
     @Inject
-    public FFinishViewModel() {
+    public FHomeViewModel() {
     }
 
     public void initiateViewModel(BaseActivity requireActivity ) {

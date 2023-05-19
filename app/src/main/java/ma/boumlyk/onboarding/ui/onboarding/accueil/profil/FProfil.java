@@ -1,17 +1,15 @@
-package ma.boumlyk.onboarding.ui.onboarding.profil;
+package ma.boumlyk.onboarding.ui.onboarding.accueil.profil;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.TranslateAnimation;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import ma.boumlyk.onboarding.R;
 import ma.boumlyk.onboarding.databinding.FProfilBinding;
-import ma.boumlyk.onboarding.databinding.FRegisterInfoBinding;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseFragment;
 

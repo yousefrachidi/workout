@@ -38,8 +38,16 @@
             android:name="ma.boumlyk.onboarding.ui.main.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan"
-            tools:ignore="LockedOrientationActivity">
-        </activity>
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name="ma.boumlyk.onboarding.ui.onboarding.accueil.AccueilActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+
         <activity
             android:name="ma.boumlyk.onboarding.ui.tools.uiHTMLViewer.ActivityHTMLViewerForSignature"
             android:exported="false"

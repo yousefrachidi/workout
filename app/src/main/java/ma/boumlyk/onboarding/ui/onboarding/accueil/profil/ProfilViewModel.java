@@ -1,4 +1,4 @@
-package ma.boumlyk.onboarding.ui.onboarding.profil;
+package ma.boumlyk.onboarding.ui.onboarding.accueil.profil;
 
 import android.widget.ArrayAdapter;
 

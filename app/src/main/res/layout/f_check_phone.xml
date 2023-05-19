@@ -47,7 +47,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="@dimen/_110sdp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_alignParentEnd="true"
                 app:srcCompat="@drawable/logo_small" />
 
@@ -99,14 +99,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        app:pinItemCount="6"
-                        app:pinItemSpacing="8dp"
-                        app:pinItemBackground="@color/gray_color"
-                        app:pinItemTextSize="24sp"
-                        app:pinItemTextColor="@color/gray_color"
-                        app:pinItemElevation="2dp"
-                        app:speakableText="Enter your PIN"
-                        app:lineColor="@color/gray_color"/>
+                          />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnResend"
@@ -143,11 +136,6 @@
                     app:numberkeyboard_keyboardType="integer"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
-
-
-
-
-
 
         </RelativeLayout>
 
