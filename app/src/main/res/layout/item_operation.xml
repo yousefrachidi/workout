@@ -31,9 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        android:textSize="@dimen/_14sdp"
         android:text="800,00 DH"
         android:textAllCaps="true"
-        android:textAppearance="?android:textAppearanceLarge"
         android:textColor="@color/black" />
 
 </RelativeLayout>

@@ -29,8 +29,8 @@ public class OperationAdapter extends RecyclerView.Adapter<OperationAdapter.Oper
     @NonNull
     @Override
     public OperationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_operation, parent, false);
-        return new OperationViewHolder(view);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_operation, parent, false);
+        return new OperationAdapter.OperationViewHolder(v);
     }
 
     @Override
