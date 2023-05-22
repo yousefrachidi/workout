@@ -9,8 +9,9 @@ import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.android.qualifiers.ApplicationContext;
 import dagger.hilt.components.SingletonComponent;
-import ma.boumlyk.onboarding.data.sources.local.db.IAMDatabase;
+import ma.boumlyk.onboarding.data.sources.local.db.SalafDatabase;
 import ma.boumlyk.onboarding.data.sources.local.db.dao.CookiesDao;
+import ma.boumlyk.onboarding.data.sources.local.db.dao.CustomerDao;
 
 @Module
 @InstallIn(SingletonComponent.class)
@@ -19,13 +20,20 @@ public class DBModule {
 
     @Provides
     @Singleton
-    public static IAMDatabase getIAMDatabase(@ApplicationContext Context context) {
-        return IAMDatabase.getInstance(context);
+    public static SalafDatabase getIAMDatabase(@ApplicationContext Context context) {
+        return SalafDatabase.getInstance(context);
     }
 
     @Provides
     @Singleton
-    public static CookiesDao getCookiesDao(IAMDatabase database) {
+    public static CookiesDao getCookiesDao(SalafDatabase database) {
         return database.cookiesDao();
     }
+
+    @Provides
+    @Singleton
+    public static CustomerDao getCustomerDao(SalafDatabase database) {
+        return database.customerDao();
+    }
+
 }

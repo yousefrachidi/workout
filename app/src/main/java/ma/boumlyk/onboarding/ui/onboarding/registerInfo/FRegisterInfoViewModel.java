@@ -18,9 +18,10 @@ public class FRegisterInfoViewModel extends BaseViewModel {
 
     String[] cityList = {"Casa, casa City", "Rabat", "789 Pine St, Anyvillage USA"};
 
-
     @Inject
     public FRegisterInfoViewModel() {
+
+
     }
 
     public void initiateViewModel(BaseActivity activity) {

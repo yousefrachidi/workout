@@ -30,6 +30,7 @@ import ma.boumlyk.onboarding.data.CookiesRepository;
 import ma.boumlyk.onboarding.data.sources.remote.interceptors.ErrorHandler;
 import ma.boumlyk.onboarding.data.sources.remote.interceptors.NetworkException;
 import ma.boumlyk.onboarding.models.cookie.Cookies;
+import ma.boumlyk.onboarding.models.customer.Customer;
 import ma.boumlyk.onboarding.models.tools.Message;
 import ma.boumlyk.onboarding.tools.message.Messenger;
 import ma.boumlyk.onboarding.tools.permissions.PermissionManager;
@@ -45,6 +46,11 @@ public class BaseViewModel extends ViewModel implements Observable {
     public Messenger messenger;
     @Inject
     public Cookies cookies;
+
+    @Inject
+    public Customer customer;
+
+
     @Inject
     public PermissionManager permissionManager;
     @Inject
