@@ -128,6 +128,17 @@ public class Utils {
     }
 
     @SuppressLint("SimpleDateFormat")
+    public static String getMonthFromMills(long timeStamp) {
+        return new SimpleDateFormat("MMMM").format(new Date(timeStamp));
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    public static String getTimeFromMills(long timeStamp) {
+
+        return new SimpleDateFormat("DD - hh:mm").format(new Date(timeStamp));
+    }
+
+    @SuppressLint("SimpleDateFormat")
     public static String getDateFromMillisecond(int from) {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.MONTH, from);

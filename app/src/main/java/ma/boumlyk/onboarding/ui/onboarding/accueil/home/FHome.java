@@ -45,10 +45,12 @@ public class FHome extends BaseFragment {
             }
         });
 
+
+
     }
 
     private void initiateView() {
-
+        binding.layoutButton.operationRecycle.setAdapter(((FHomeViewModel) viewModel).getAdapter(requireActivity()) );
     }
 
 
