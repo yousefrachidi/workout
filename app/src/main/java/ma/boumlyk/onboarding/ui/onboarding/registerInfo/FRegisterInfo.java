@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
-import android.widget.ArrayAdapter;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
@@ -33,6 +32,14 @@ public class FRegisterInfo extends BaseFragment {
 
     private void initiateObservers() {
         viewModel.initiateViewModel((BaseActivity) requireActivity());
+        ((FRegisterInfoViewModel) viewModel).isActive.observe(requireActivity(),aBoolean -> {
+            if (!aBoolean) {
+                disableBTN();
+            }else {
+                enableBTN();
+            }
+        });
+
         viewModel.actions.observe(requireActivity(), actions -> {
             for (String action : actions) {
 
@@ -41,6 +48,17 @@ public class FRegisterInfo extends BaseFragment {
 //        slideDown(binding.relativeLayout2);
         viewModel.animateViewFromBottomToTop(binding.relativeLayout2);
 
+    }
+
+    private void disableBTN() {
+//        binding.btnNext.setBackgroundColor(requireActivity().getColor(R.color.gray_color));
+        binding.btnNext.setTextColor(requireActivity().getColor(R.color.colorBtn));
+        binding.btnNext.setBackground(requireActivity().getDrawable(R.drawable.border_btn_disable));
+    }
+    private void enableBTN() {
+      //  binding.btnNext.setBackgroundColor(requireActivity().getColor(R.color.colorBtn));
+        binding.btnNext.setBackground(requireActivity().getDrawable(R.drawable.border_btn_secondly));
+        binding.btnNext.setTextColor(requireActivity().getColor(R.color.white));
     }
 
     private void initiateView() {

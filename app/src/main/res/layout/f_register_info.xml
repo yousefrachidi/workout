@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Create Account"
+                    android:text="@string/create_account"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/black" />
 
@@ -90,8 +90,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:onTextChanged="@{viewModel::onUsernameTextChangedFullName}"
                     android:backgroundTint="@color/gray_color"
-                    android:hint="Full Name"
+                    android:hint="@string/full_name"
                     android:inputType="textPersonName|textAutoCorrect|textCapWords"
                     android:maxLines="1"
                     android:singleLine="true"
@@ -104,7 +105,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:backgroundTint="@color/gray_color"
-                    android:hint="Email"
+                    android:hint="@string/empty_email"
+                    android:text="@{viewModel.customer.email}"
+                    android:onTextChanged="@{viewModel::onUsernameTextChangedEmail}"
                     android:inputType="textEmailAddress"
                     android:textColorHint="@color/gray_color" />
 
@@ -149,7 +152,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:backgroundTint="@color/gray_color"
-                    android:hint="City"
+                    android:hint="@string/city"
+                    android:text="@{viewModel.customer.city}"
+                    android:onTextChanged="@{viewModel::onUsernameTextChangedCity}"
                     android:inputType="textPostalAddress"
                     android:textColorHint="@color/gray_color"
                     android:textSize="16sp" />
@@ -160,9 +165,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:backgroundTint="@color/gray_color"
-                    android:hint="Address"
+                    android:hint="@string/address"
                     android:inputType="textPostalAddress"
                     android:maxLines="3"
+                    android:text="@{viewModel.customer.address}"
+                    android:onTextChanged="@{viewModel::onUsernameTextChangedAddress}"
                     android:textColorHint="@color/gray_color"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -184,7 +191,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/border_btn_secondly"
                     android:onClick="@{(v) -> viewModel.onCreateAccount()}"
-                    android:text="Next"
+                    android:text="@string/next"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

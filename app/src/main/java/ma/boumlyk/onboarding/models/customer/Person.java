@@ -12,6 +12,11 @@ public class Person extends Model {
     @SerializedName("lastName")
     protected String lastName;
 
+    @SerializedName("fullName")
+    protected String fullName;
+
+
+
     @SerializedName("country")
     protected String country;
 
@@ -94,5 +99,13 @@ public class Person extends Model {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 }

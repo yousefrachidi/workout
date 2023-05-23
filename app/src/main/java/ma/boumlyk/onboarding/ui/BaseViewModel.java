@@ -44,6 +44,7 @@ public class BaseViewModel extends ViewModel implements Observable {
 
     @Inject
     public Messenger messenger;
+
     @Inject
     public Cookies cookies;
 

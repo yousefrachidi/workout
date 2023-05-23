@@ -65,7 +65,7 @@
     <string name="birth_date">Date de naissance :</string>
     <string name="cin_number">N° de CIN :</string>
     <string name="validity_date">Date de validité :</string>
-    <string name="address">Adresse de résidence :</string>
+    <string name="address">Adresse</string>
     <string name="confirm">Confirmer</string>
     <string name="remettre_en_service">Remettre en service</string>
     <string name="cancel">Annuler</string>
@@ -204,5 +204,7 @@
     <string name="create_account">Create account</string>
     <string name="sing_in">Sing In</string>
     <string name="resend_code"><u>Resend Code</u></string>
+    <string name="city">City</string>
+    <string name="veulliez_saiasir_">Veuilliez saisir tous les champs</string>
 
 </resources>

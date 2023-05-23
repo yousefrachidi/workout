@@ -23,7 +23,7 @@ import ma.boumlyk.onboarding.tools.security.checkers.signature.SignatureDetector
 import ma.boumlyk.onboarding.tools.security.tools.HashManager;
 
 
-@Database(entities = {Cookies.class, Customer.class,}, version = 02, exportSchema = false)
+@Database(entities = {Cookies.class, Customer.class,}, version = 03, exportSchema = false)
 @TypeConverters(Converters.class)
 public abstract class SalafDatabase extends RoomDatabase {
 
