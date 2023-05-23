@@ -127,7 +127,7 @@
                             android:backgroundTintMode="src_in"
                             android:drawablePadding="@dimen/_8sdp"
                             android:hint="__ __ __ __ __"
-                            android:inputType="number"
+                            android:inputType="none"
                             android:maxLines="1"
                             android:onTextChanged="@{viewModel::onPhoneTextChanged}"
                             android:padding="@dimen/_12sdp"
@@ -150,6 +150,7 @@
                 <com.davidmiguel.numberkeyboard.NumberKeyboard
                     xmlns:keyboard="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
+                    android:id="@+id/keyword"
                     android:layout_height="@dimen/_200sdp"
                     android:layout_marginTop="@dimen/_40sdp"
                     keyboard:numberkeyboard_keyboardType="integer"

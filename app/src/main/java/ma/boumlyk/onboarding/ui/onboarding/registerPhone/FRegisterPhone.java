@@ -10,6 +10,8 @@ import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.davidmiguel.numberkeyboard.NumberKeyboardListener;
+
 import ma.boumlyk.onboarding.R;
 import ma.boumlyk.onboarding.databinding.FRegisterPhoneBinding;
 import ma.boumlyk.onboarding.ui.BaseActivity;
@@ -17,7 +19,6 @@ import ma.boumlyk.onboarding.ui.BaseFragment;
 import ma.boumlyk.onboarding.ui.tools.UITools;
 
 public class FRegisterPhone extends BaseFragment {
-
 
     FRegisterPhoneBinding binding;
 
@@ -59,6 +60,38 @@ public class FRegisterPhone extends BaseFragment {
     }
 
     private void initiateView() {
+
+        binding.editPhoneNumber.setCursorVisible(false);
+        binding.editPhoneNumber.setFocusableInTouchMode(false);
+        binding.editPhoneNumber.setFocusable(false);
+
+        binding.keyword.setListener(new NumberKeyboardListener() {
+            @Override
+            public void onNumberClicked(int i) {
+                binding.editPhoneNumber.setText(binding.editPhoneNumber.getText() +""+ i);
+
+
+            }
+
+            @Override
+            public void onLeftAuxButtonClicked() {
+
+            }
+
+            @Override
+            public void onRightAuxButtonClicked() {
+
+                String text =  binding.editPhoneNumber.getText().toString();
+                if (text.length() > 0) {
+                    String newText = text.substring(0, text.length() - 1);
+                    binding.editPhoneNumber.setText(newText);
+                    binding.editPhoneNumber.setSelection(newText.length());
+                }
+
+            }
+        });
+
+
 
     }
 
