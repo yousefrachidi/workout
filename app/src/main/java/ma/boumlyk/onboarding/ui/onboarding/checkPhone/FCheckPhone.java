@@ -14,6 +14,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.chaos.view.PinView;
+import com.davidmiguel.numberkeyboard.NumberKeyboardListener;
 
 import ma.boumlyk.onboarding.R;
 import ma.boumlyk.onboarding.databinding.FCheckPhoneBinding;
@@ -52,12 +53,37 @@ public class FCheckPhone extends BaseFragment {
                 }
             }
         });
-//        slideDown(binding.relativeLayout2);
         viewModel.animateViewFromBottomToTop(binding.relativeLayout2);
 
     }
 
     private void initiateView() {
+
+        binding.keyword.setListener(new NumberKeyboardListener() {
+            @Override
+            public void onNumberClicked(int i) {
+                binding.pinView.setText(binding.pinView.getText() +""+ i);
+            }
+
+            @Override
+            public void onLeftAuxButtonClicked() {
+            }
+
+            @Override
+            public void onRightAuxButtonClicked() {
+
+                String text =  binding.pinView.getText().toString();
+                if (text.length() > 0) {
+                    String newText = text.substring(0, text.length() - 1);
+                    binding.pinView.setText(newText);
+                    binding.pinView.setSelection(newText.length());
+                }
+
+            }
+        });
+
+
+
         binding.pinView.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -73,9 +99,6 @@ public class FCheckPhone extends BaseFragment {
             public void afterTextChanged(Editable s) {
                 String otp = s.toString();
                 if (otp.length() == binding.pinView.getItemCount()) {
-                    // Perform OTP verification logic here
-                    // You can access the entered OTP through the 'otp' variable
-
 
                     if (otp.equals("0000")) {
                         requireActivity().getSupportFragmentManager().beginTransaction()

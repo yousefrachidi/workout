@@ -12,6 +12,7 @@ import javax.inject.Inject;
 import dagger.hilt.android.lifecycle.HiltViewModel;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
+import ma.boumlyk.onboarding.ui.onboarding.finish.FFinish;
 import ma.boumlyk.onboarding.ui.onboarding.registerInfo.FRegisterInfo;
 import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 
@@ -35,41 +36,10 @@ public class FUploadDocViewModel extends BaseViewModel {
         this.editPhoneNumber=editPhoneNumber;
     }
 
-    public void onCreateAccount() {
-
-
-    }
-
-    public void onNumberKeyboardClick(View v) {
-
-
-
-
-    }
-
-    public void onPhoneTextChanged(CharSequence s, int start, int before, int count) {
-        isPhoneNumberEmpty = s.toString().isEmpty();
-        actions.postValue(Collections.singletonList(BaseActivity.ACTION_ON_PHONE_TYPING));
-    }
-
-
-    public EditText.OnFocusChangeListener getOnPhoneFocusChanged() {
-        return (v, hasFocus) -> {
-            if ((!hasFocus) && (!isPhoneNumberEmpty)) {
-                if (!isPhoneNumberValid)
-                    actions.postValue(Collections.singletonList(BaseActivity.ACTION_PHONE_NOT_VALID));
-
-                if (!hasFocus) {
-                    hideKeyboard(v);
-                }
-            }
-        };
-    }
-
-    // Method to hide the soft keyboard
-    private void hideKeyboard(View view) {
-        InputMethodManager imm = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    @Override
+    public void onNextPressed() {
+        super.onNextPressed();
+        fragment.postValue(new FFinish());
     }
 
     public void onNeedSupport() {

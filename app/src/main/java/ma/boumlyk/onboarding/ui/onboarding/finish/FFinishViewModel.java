@@ -19,19 +19,12 @@ import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 @HiltViewModel
 public class FFinishViewModel extends BaseViewModel {
 
-
-
     @Inject
     public FFinishViewModel() {
     }
 
     public void initiateViewModel(BaseActivity requireActivity ) {
         super.initiateViewModel(requireActivity);
-
-
-    }
-
-    public void onCreateAccount() {
 
 
     }

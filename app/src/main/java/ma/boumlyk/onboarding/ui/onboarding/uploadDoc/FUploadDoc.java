@@ -37,7 +37,6 @@ public class FUploadDoc extends BaseFragment {
         viewModel.actions.observe(requireActivity(), actions -> {
             for (String action : actions) {
                 switch (action) {
-
                     case BaseActivity.ACTION_FINISH_LOADING:
                         onFinishLoading();
                         break;

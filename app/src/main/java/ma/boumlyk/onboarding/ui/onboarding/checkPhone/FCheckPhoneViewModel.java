@@ -37,10 +37,7 @@ public class FCheckPhoneViewModel extends BaseViewModel {
 
     }
 
-    public void onCreateAccount() {
 
-
-    }
 
     public void onNumberKeyboardClick(View view) {
 

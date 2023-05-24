@@ -78,12 +78,10 @@ public class FRegisterPhone extends BaseFragment {
             @Override
             public void onNumberClicked(int i) {
                 binding.editPhoneNumber.setText(binding.editPhoneNumber.getText() +""+ i);
-
             }
 
             @Override
             public void onLeftAuxButtonClicked() {
-
             }
 
             @Override

@@ -130,11 +130,12 @@
                 android:layout_below="@+id/rlFirst">
 
                 <com.davidmiguel.numberkeyboard.NumberKeyboard
+                    android:id="@+id/keyword"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_200sdp"
+                    android:layout_centerInParent="true"
                     android:onClick="@{(v) -> viewModel.onNumberKeyboardClick(v)}"
-                    app:numberkeyboard_keyboardType="integer"
-                    android:layout_centerInParent="true"/>
+                    app:numberkeyboard_keyboardType="integer" />
             </RelativeLayout>
 
         </RelativeLayout>
