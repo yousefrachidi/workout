@@ -6,6 +6,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import androidx.annotation.Nullable;
+import androidx.lifecycle.MutableLiveData;
+
+import com.hbb20.CountryCodePicker;
 
 import java.util.Collections;
 
@@ -14,6 +17,7 @@ import javax.inject.Inject;
 import dagger.hilt.android.lifecycle.HiltViewModel;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
+import ma.boumlyk.onboarding.ui.onboarding.checkPhone.FCheckPhone;
 import ma.boumlyk.onboarding.ui.onboarding.home.FirstF;
 import ma.boumlyk.onboarding.ui.onboarding.registerInfo.FRegisterInfo;
 import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
@@ -21,32 +25,42 @@ import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
 @HiltViewModel
 public class FRegisterPhoneViewModel extends BaseViewModel {
 
-    String[] addresses = {"123 Main St, Anytown USA", "456 Oak St, Anycity USA", "789 Pine St, Anyvillage USA"};
-
     boolean isPhoneNumberValid = false;
     boolean isPhoneNumberEmpty = true;
 
     EditText editPhoneNumber;
 
+    public MutableLiveData<String> phoneNumberCountryCode = new MutableLiveData<>();
+    public MutableLiveData<Boolean> isActiveBTN = new MutableLiveData<>(false);
 
     @Inject
     public FRegisterPhoneViewModel() {
     }
 
-    public void initiateViewModel(BaseActivity requireActivity, EditText editPhoneNumber) {
+    public void initiateViewModel(BaseActivity requireActivity, EditText editPhoneNumber, CountryCodePicker countryCodePicker) {
         super.initiateViewModel(requireActivity);
         this.editPhoneNumber=editPhoneNumber;
+
+        countryCodePicker.setOnCountryChangeListener(() -> phoneNumberCountryCode.postValue(countryCodePicker.getSelectedCountryCodeWithPlus()));
+        countryCodePicker.setPhoneNumberValidityChangeListener(isValidNumber -> {
+            isPhoneNumberValid = isValidNumber;
+
+            if (isValidNumber) {
+                isActiveBTN.postValue( true);
+            }else {
+                isActiveBTN.postValue(false);
+            }
+        });
+
     }
 
-    public void onCreateAccount() {
-
-
+    @Override
+    public void onNextPressed() {
+        super.onNextPressed();
+        fragment.postValue(new FCheckPhone());
     }
 
     public void onNumberKeyboardClick(View v) {
-
-
-
 
     }
 

@@ -101,7 +101,7 @@
                         android:orientation="horizontal">
 
                         <com.hbb20.CountryCodePicker
-                            android:id="@+id/ccp_cnx"
+                            android:id="@+id/ccpNumbre"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_gravity="start|center"
@@ -175,7 +175,7 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/border_btn_secondly"
-                    android:onClick="@{(v) -> viewModel.onCreateAccount()}"
+                    android:onClick="@{(v) -> viewModel.onNextPressed()}"
                     android:text="Verfry"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"

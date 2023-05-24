@@ -34,7 +34,14 @@ public class FRegisterPhone extends BaseFragment {
     }
 
     private void initiateObservers() {
-        ((FRegisterPhoneViewModel) viewModel).initiateViewModel((BaseActivity) requireActivity(),binding.editPhoneNumber);
+        ((FRegisterPhoneViewModel) viewModel).initiateViewModel((BaseActivity) requireActivity(), binding.editPhoneNumber,  binding.ccpNumbre);
+        ((FRegisterPhoneViewModel) viewModel).isActiveBTN.observe(requireActivity(),aBoolean -> {
+            if (aBoolean  ) {
+                enableBTN();
+            }else {
+                disableBTN();
+            }
+        });
         viewModel.actions.observe(requireActivity(), actions -> {
             for (String action : actions) {
                 switch (action) {
@@ -60,16 +67,17 @@ public class FRegisterPhone extends BaseFragment {
     }
 
     private void initiateView() {
-
+        disableBTN();
         binding.editPhoneNumber.setCursorVisible(false);
         binding.editPhoneNumber.setFocusableInTouchMode(false);
         binding.editPhoneNumber.setFocusable(false);
+
+        binding.ccpNumbre.registerCarrierNumberEditText(binding.editPhoneNumber);
 
         binding.keyword.setListener(new NumberKeyboardListener() {
             @Override
             public void onNumberClicked(int i) {
                 binding.editPhoneNumber.setText(binding.editPhoneNumber.getText() +""+ i);
-
 
             }
 
@@ -91,25 +99,27 @@ public class FRegisterPhone extends BaseFragment {
             }
         });
 
-
-
     }
 
-    public void slideDown(View view) {
-        view.setVisibility(View.INVISIBLE);
-        TranslateAnimation animate = new TranslateAnimation(0, 0, view.getHeight(), 0);
-        animate.setDuration(1500);
-        animate.setFillAfter(true);
-        view.startAnimation(animate);
-      //  view.setVisibility(View.VISIBLE);
-    }
 
     protected void onPhoneTyping() {
         binding.editPhoneNumber.setTextColor(ContextCompat.getColor(requireContext(), R.color.field_text2));
     }
 
     protected void onPhoneNotValid() {
+        disableBTN();
         binding.editPhoneNumber.setTextColor(ContextCompat.getColor(requireActivity(), R.color.errorTextViewColor));
+    }
+
+    private void disableBTN() {
+        binding.btnNext.setEnabled(false);
+        binding.btnNext.setTextColor(requireActivity().getColor(R.color.colorBtn));
+        binding.btnNext.setBackground(requireActivity().getDrawable(R.drawable.border_btn_disable));
+    }
+    private void enableBTN() {
+        binding.btnNext.setEnabled(true);
+        binding.btnNext.setBackground(requireActivity().getDrawable(R.drawable.border_btn_secondly));
+        binding.btnNext.setTextColor(requireActivity().getColor(R.color.white));
     }
 
 

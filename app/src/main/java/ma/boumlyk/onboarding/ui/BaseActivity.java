@@ -46,6 +46,7 @@ public class BaseActivity extends AppCompatActivity {
     public static final String ACTION_REQUEST_STORAGE_PERMISSIONS = "REQUEST_STORAGE_PERMISSIONS";
     public static final String ACTION_ON_PHONE_TYPING = "ACTION_ON_PHONE_TYPING";
     public static final String ACTION_PHONE_NOT_VALID = "ACTION_PHONE_NOT_VALID";
+    public static final String ACTION_PHONE_VALID = "ACTION_PHONE_VALID";
 
     protected BaseViewModel viewModel;
     private Handler disconnectHandler = new Handler(msg -> true);
