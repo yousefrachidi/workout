@@ -129,6 +129,7 @@
                         android:layout_centerVertical="true"
                         android:drawablePadding="@dimen/_10sdp"
                         android:text="Help center"
+                        android:drawableTint="@color/colorBtn"
                         android:drawableStart="@drawable/ic_setting"
                         />
 
@@ -141,6 +142,7 @@
                         android:onClick="@{(v) -> viewModel.onBackPressed()}"
                         android:background="@android:color/transparent"
                         android:padding="@dimen/_20sdp"
+
                         app:srcCompat="@drawable/ic_next"
                         app:tint="@color/black" />
 
@@ -162,6 +164,7 @@
                         android:layout_centerVertical="true"
                         android:drawablePadding="@dimen/_10sdp"
                         android:text="Settings"
+                        android:drawableTint="@color/colorBtn"
                         android:drawableStart="@drawable/ic_setting"
                         />
 

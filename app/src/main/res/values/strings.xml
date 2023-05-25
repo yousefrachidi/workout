@@ -206,5 +206,6 @@
     <string name="resend_code"><u>Resend Code</u></string>
     <string name="city">City</string>
     <string name="veulliez_saiasir_">Veuilliez saisir tous les champs</string>
+    <string name="total_balance">TOTAL BALANCE</string>
 
 </resources>

@@ -13,6 +13,7 @@ import ma.boumlyk.onboarding.adapters.OperationAdapter;
 import ma.boumlyk.onboarding.models.Operation;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
+import ma.boumlyk.onboarding.ui.onboarding.accueil.profil.FProfil;
 import ma.boumlyk.onboarding.ui.onboarding.login.FLogin;
 import ma.boumlyk.onboarding.ui.onboarding.registerInfo.FRegisterInfo;
 import ma.boumlyk.onboarding.ui.onboarding.support.FSupport;
@@ -68,7 +69,8 @@ public class FHomeViewModel extends BaseViewModel {
         return operations;
     }
 
-    public void onCreateAccount() {
+    public void openMenu() {
+        fragment.postValue(new FProfil());
     }
 
     public void onNeedSupport() {
@@ -77,15 +79,9 @@ public class FHomeViewModel extends BaseViewModel {
 
 
     @Override
-    public void onNextPressed() {
-        super.onNextPressed();
-        fragment.postValue(new FLogin());
-    }
-
-    @Override
     public void onBackPressed() {
         super.onBackPressed();
-        fragment.postValue(new FRegisterInfo());
+        fragment.postValue(new FLogin());
     }
 
     public OperationAdapter getAdapter(FragmentActivity requireActivity) {
