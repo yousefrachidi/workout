@@ -1,4 +1,4 @@
-package ma.boumlyk.onboarding.ui.onboarding.exercise;
+package ma.boumlyk.onboarding.ui.onboarding.movement;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,20 +10,20 @@ import androidx.lifecycle.ViewModelProvider;
 
 import ma.boumlyk.onboarding.R;
 import ma.boumlyk.onboarding.databinding.FragmentExerciseBinding;
-import ma.boumlyk.onboarding.databinding.FragmentFirstBinding;
+import ma.boumlyk.onboarding.databinding.FragmentMovementBinding;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseFragment;
 
-public class ExerciseF extends BaseFragment {
+public class MovementF extends BaseFragment {
 
 
-    FragmentExerciseBinding binding;
+    FragmentMovementBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_exercise, container, false);
-        viewModel = new ViewModelProvider(this).get(ExerciseFViewModel.class);
-        binding.setViewModel((ExerciseFViewModel) viewModel);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_movement, container, false);
+        viewModel = new ViewModelProvider(this).get(MovementFViewModel.class);
+        binding.setViewModel((MovementFViewModel) viewModel);
         binding.setLifecycleOwner(this);
         initiateView();
         initiateObservers();
@@ -32,7 +32,7 @@ public class ExerciseF extends BaseFragment {
 
     private void initiateObservers() {
         viewModel.initiateViewModel((BaseActivity) requireActivity());
-        ((ExerciseFViewModel)viewModel).selectedExercise.observe(requireActivity(), exercise -> {
+        ((MovementFViewModel)viewModel).selectedExercise.observe(requireActivity(), exercise -> {
 
         });
         viewModel.actions.observe(requireActivity(), actions -> {
@@ -44,6 +44,6 @@ public class ExerciseF extends BaseFragment {
 
     private void initiateView() {
         binding.exerciseRecycle.setHasFixedSize(true);
-        binding.exerciseRecycle.setAdapter(((ExerciseFViewModel) viewModel).getAdapter(requireActivity()) );
+        binding.exerciseRecycle.setAdapter(((MovementFViewModel) viewModel).getAdapter(requireActivity()) );
     }
 }

@@ -1,4 +1,4 @@
-package ma.boumlyk.onboarding.ui.onboarding.exercise;
+package ma.boumlyk.onboarding.ui.onboarding.movement;
 
 import android.view.View;
 
@@ -16,17 +16,16 @@ import ma.boumlyk.onboarding.adapters.ExercisesAdapter;
 import ma.boumlyk.onboarding.models.Exercise;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
-import ma.boumlyk.onboarding.ui.onboarding.movement.MovementF;
 
 @HiltViewModel
-public class ExerciseFViewModel extends BaseViewModel {
+public class MovementFViewModel extends BaseViewModel {
 
     ExercisesAdapter exercisesAdapter ;
 
     public MutableLiveData<Exercise> selectedExercise = new MutableLiveData<>(null);
 
     @Inject
-    public ExerciseFViewModel() {
+    public MovementFViewModel() {
     }
 
     public void initiateViewModel(BaseActivity activity) {
@@ -53,7 +52,7 @@ public class ExerciseFViewModel extends BaseViewModel {
             @Override
             public void onItemClick(View view, Exercise exercise) {
                 selectedExercise.postValue(exercise);
-                fragment.postValue(new MovementF());
+                fragment.postValue(new );
 
             }
 

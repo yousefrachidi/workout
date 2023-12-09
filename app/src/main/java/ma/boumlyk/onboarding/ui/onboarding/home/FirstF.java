@@ -15,6 +15,7 @@ import ma.boumlyk.onboarding.databinding.FragmentFirstBinding;
 import ma.boumlyk.onboarding.ui.BaseActivity;
 import ma.boumlyk.onboarding.ui.BaseFragment;
 import ma.boumlyk.onboarding.ui.BaseViewModel;
+import ma.boumlyk.onboarding.ui.onboarding.accueil.home.FHomeViewModel;
 
 public class FirstF extends BaseFragment {
 
@@ -34,6 +35,9 @@ public class FirstF extends BaseFragment {
 
     private void initiateObservers() {
         viewModel.initiateViewModel((BaseActivity) requireActivity());
+        ((FirstFViewModel)viewModel).selectedExercise.observe(requireActivity(),exercise -> {
+
+        });
         viewModel.actions.observe(requireActivity(), actions -> {
             for (String action : actions) {
 
@@ -42,5 +46,7 @@ public class FirstF extends BaseFragment {
     }
 
     private void initiateView() {
+        binding.exerciseRecycle.setHasFixedSize(true);
+        binding.exerciseRecycle.setAdapter(((FirstFViewModel) viewModel).getAdapter(requireActivity()) );
     }
 }

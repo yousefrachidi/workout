@@ -1,13 +1,13 @@
 package ma.boumlyk.onboarding.models;
 
-public class BodyBold {
+public class Movement {
 
     String id;
     String name;
     int img;
 
 
-    public BodyBold(String id, String name, int img) {
+    public Movement(String id, String name, int img) {
         this.id = id;
         this.name = name;
         this.img = img;
