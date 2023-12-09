@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp"
+    android:padding="@dimen/_3sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/imgExe"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        app:srcCompat="@drawable/ic_account"
+        app:tint="@color/black" />
+
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imgExe"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="ABS"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+
+    <ImageButton
+        android:id="@+id/icNext"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:paddingVertical="@dimen/_5sdp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_next"
+        app:tint="@color/colorPrimary" />
+
+</RelativeLayout>
