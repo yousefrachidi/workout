@@ -52,7 +52,7 @@ public class MovementFViewModel extends BaseViewModel {
             @Override
             public void onItemClick(View view, Exercise exercise) {
                 selectedExercise.postValue(exercise);
-                fragment.postValue(new );
+                fragment.postValue(new Ac );
 
             }
 
